@@ -6,16 +6,16 @@
 #### POST /users/register
 
 ### List all trips of current user
-#### GET /users/<userToken>/trips
+#### GET /users/&lt;userToken&gt;/trips
 
 ### View single trip
-#### GET /trips/<tripToken>
+#### GET /trips/&lt;tripToken&gt;
 
 ### Create a new trip
 #### POST /trips
 
 ### Send a trip update
-#### POST /trips/<tripToken>/update
+#### POST /trips/&lt;tripToken&gt;/update
 	
 ### End trip
-#### POST /trips/<tripToken>/end
+#### POST /trips/&lt;tripToken&gt;/end
