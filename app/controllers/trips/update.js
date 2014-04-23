@@ -11,13 +11,14 @@ var cur = 0;
 
 module.exports = function (req, res, next) {
   var result = req.body;
+  console.log(req.body.tripToken, req.body.speed);
 
-  if ("true" !== req.body.new) {
-    res.send(result);
-  } else {
+  // if ("true" !== req.body.new) {
+  //   res.send(result);
+  // } else {
     result.songID = songs[cur];
     res.send(result);
 
     if (++cur >= songs.length) cur = 0;
-  }
+  // }
 };
