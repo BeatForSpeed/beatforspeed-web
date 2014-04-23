@@ -10,19 +10,13 @@ var songs = [
 var cur = 0;
 
 module.exports = function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  var result = req.body;
 
-  if (true !== req.body.new) {
-    res.send({
-      success: true
-    });
+  if ("true" !== req.body.new) {
+    res.send(result);
   } else {
-    res.send({
-      success: true,
-      songID: songs[cur]
-    });
+    result.songID = songs[cur];
+    res.send(result);
 
     if (++cur >= songs.length) cur = 0;
   }
