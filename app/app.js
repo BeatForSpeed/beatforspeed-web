@@ -9,8 +9,9 @@ var express = require('express')
   , debug = require('debug')('app');
 
 function init(config) {
-
   var app = express();
+  
+  require('./models')(config);
   
   // Application settings
   app.enable('trust proxy');
